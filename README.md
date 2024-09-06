@@ -55,12 +55,12 @@ A persistência dos dados é feita utilizando o banco de dados PostgreSQL.
   - vldesconto
 
 ## Grupo
-Eduarda Goulart
-Fernanda Canto
-Gabriel Siqueira
-Gustavo Santos
-Pedro Benvindo
-Rafael Januzi
+- Eduarda Goulart
+- Fernanda Canto
+- Gabriel Siqueira
+- Gustavo Santos
+- Pedro Benvindo
+- Rafael Januzi
 ### Como Rodar o Projeto
 Clone o repositório.
 Configure a conexão com o PostgreSQL no arquivo .ini.
