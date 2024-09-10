@@ -1,16 +1,19 @@
 package trabalhofinal;
 
+
 import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public abstract class PessoaAbstrata {
-	private String nome;
-	private String cpf;
-	private Date dt_nascimento;
+	protected String nome;
+	protected String cpf;
+	protected LocalDate dt_nascimento;
 	
-	public PessoaAbstrata(String nome, String cpf,Date dt_nascimento) {
+	public PessoaAbstrata(String nome, String cpf,LocalDate data) {
 		this.nome = nome;
 		this.cpf = cpf;
-		this.dt_nascimento = dt_nascimento;
+		this.dt_nascimento = data;
 	}
 	public PessoaAbstrata() {	
 	}
@@ -26,10 +29,10 @@ public abstract class PessoaAbstrata {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public Date getDt_nascimento() {
+	public LocalDate getDt_nascimento() {
 		return dt_nascimento;
 	}
-	public void setDt_nascimento(Date dt_nascimento) {
+	public void setDt_nascimento(LocalDate dt_nascimento) {
 		this.dt_nascimento = dt_nascimento;
 	}
 	

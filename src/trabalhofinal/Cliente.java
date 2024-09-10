@@ -1,6 +1,7 @@
 package trabalhofinal;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class Cliente extends PessoaAbstrata {
 	private String endereco;
@@ -11,11 +12,11 @@ public class Cliente extends PessoaAbstrata {
 	public Cliente() {
 		super();
 	}
-	public Cliente(String nome, String cpf, Date dt_nascimento) {
+	public Cliente(String nome, String cpf, LocalDate dt_nascimento) {
 		super(nome, cpf, dt_nascimento);
 	}	
-	public Cliente(String nome, String cpf, Date dt_nascimento, String endereco, String telefone) {
-		super(nome, cpf, dt_nascimento);
+	public Cliente(String nome, String cpf, LocalDate data, String endereco, String telefone) {
+		super(nome, cpf, data);
 		this.endereco = endereco;
 		this.telefone = telefone;
 		
