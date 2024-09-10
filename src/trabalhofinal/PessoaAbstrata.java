@@ -1,9 +1,9 @@
 package trabalhofinal;
 
 
-import java.sql.Date;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 
 public abstract class PessoaAbstrata {
 	protected String nome;

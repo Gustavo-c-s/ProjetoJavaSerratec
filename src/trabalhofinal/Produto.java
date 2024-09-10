@@ -7,7 +7,6 @@ public class Produto {
 	private String categoria;
 	
 	
-	
 	public Produto() {
 
 	}

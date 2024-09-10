@@ -66,7 +66,7 @@ public class ConexaoBanco {
 			int coluna =metaData.getColumnCount();
 			while(resultado.next()) {
 				for(int i =1;i<=coluna;i++) {
-					System.out.println(metaData.getColumnName(i)+": "+resultado.getString(i)+"!");
+					System.out.println(metaData.getColumnName(i)+": "+resultado.getString(i)+".");
 				}System.out.println();
 			}
 		} catch (Exception e) {

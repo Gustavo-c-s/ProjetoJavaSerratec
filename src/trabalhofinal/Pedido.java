@@ -7,13 +7,9 @@ public class Pedido extends Produto {
 	private Date dt_entrega;
 	private double valor_total;
 	private String observacao;
-	
-	
-	
-	
-	public Pedido() {
-		super();
 		
+	public Pedido() {
+		super();	
 	}
 
 	public Pedido(String descricao, double vl_custo, double vl_venda, String categoria,Date dt_emissao, Date dt_entrega, String observacao) {

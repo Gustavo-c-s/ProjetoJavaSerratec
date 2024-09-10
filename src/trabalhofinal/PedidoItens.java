@@ -4,8 +4,7 @@ public class PedidoItens extends Produto{
 	protected int qt_produto;
 	protected double vl_desconto;
 	
-	
-	
+
 	public PedidoItens() {
 		super();	
 	}	

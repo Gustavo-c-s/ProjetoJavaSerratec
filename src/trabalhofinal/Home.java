@@ -16,8 +16,8 @@ public class Home {
 	public static void menu() throws ParseException {
 		SimpleDateFormat formatoData = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy, HH:mm");
 		Date relogio = new Date(0);
-		String dataFor = formatoData.format(relogio);//funçao so mostra data e hora achei maneiro pra colocar
-		
+		String dataFor = formatoData.format(relogio);
+		//funçao so mostra data e hora achei maneiro pra colocar
 		String opcao = "";
 		while(!opcao.equals("6")) {
 			System.out.println(dataFor);
@@ -41,13 +41,12 @@ public class Home {
 	public static void cadastraCliente(List<Cliente> cliente,ConexaoBanco con ) throws ParseException {
 		String res ="";
 			
-        
 		do {
 			try {
 				
 				String nome = Ler.lerString("Informe o nome:");
 				String cpf = Ler.lerString("Informe o CPF: ");
-				
+				//parte para converte data para aceita no banco de dados
 				LocalDate data= null;
 		        boolean dataValida = false;
 		        while(!dataValida) {
@@ -56,19 +55,18 @@ public class Home {
 					DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 					data=LocalDate.parse(dt,formatter);
 					dataValida = true;
+				//ate aqui	
 		        }
 				String endereco = Ler.lerString("Informe o endereco: ");
 				String telefone = Ler.lerString("Informe o telefone");
-				//problema ai add data no banco de dado
+				
 				
 				Cliente novoCliente = new Cliente(nome,cpf,data,endereco,telefone);
 				cliente.add(novoCliente);
 				con.cadastroCliente(novoCliente);
 			} catch (DateTimeParseException e) {
 				System.out.println("Formato de data inválido. Por favor, use o formato yyyy-MM-dd.");
-	            
-				// TODO: handle exception
-			}//ate aqui é 			
+			}			
 			while(true) {
 				res = Ler.lerString("Deseja continuar cadastrando? 1 - sim / 2 - retonar");
 				if (res.equals("2")) {
@@ -81,7 +79,6 @@ public class Home {
 			}
 		}while(res.equals("1"));
 	}
-
 	public static void cadastraProduto(List<Produto> produto,ConexaoBanco con ){
 		String res;
 		
@@ -133,15 +130,14 @@ public class Home {
 		 case "6":
 			 listaProduto(con);
 		 case "0":
-		 System.out.println("ENCERRANDO O PROGRAMA...");
+		     System.out.println("ENCERRANDO O PROGRAMA...");
 			 return;
 		 default:
 		     System.out.println("OPÇÃO INVÁLIDA. TENTE NOVAMENTE.");
 	 }		
 	}
 	private static void listadePedido(ConexaoBanco con) {
-		con.consultaTabela("pedido");
-		
+		con.consultaTabela("pedido");	
 	}
 	private static void listaProduto(ConexaoBanco con) {
 		con.consultaTabela("produto");
