@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class ConexaoBanco {
 	String url = "jdbc:postgresql://localhost:5432/ProjetojavaSerratec";
 		String usuario = "postgres";
-		String senha = "135790";
+		String senha = "senha";
 	
 	public Connection conectar()throws SQLException {
 		return DriverManager.getConnection(url,usuario,senha);
